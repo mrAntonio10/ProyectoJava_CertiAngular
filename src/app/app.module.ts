@@ -9,7 +9,6 @@ import { ComponentsModule } from './components/components.module';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
-
 @NgModule({
   declarations: [AppComponent, InicioComponent, GotyComponent],
   imports: [

@@ -1,0 +1,12 @@
+1. Crear interfaces de los videojuegos; objetivo, poder modificar las imagenes/nombres
+	1.1 Interfaz: id, nombre, imagen, descripcion, votaciones
+2. Crear un componente Login
+3. tener una interfaz de usuarios que puedan realizar Login al sistema
+	3.1 id, nombre, user, password
+	3.2 idUser, idJuego, fechaRegistrada
+
+4. crear un componente Error de login 
+5. Descargar 2 monospaced fonts para utilizar
+6. modificar css de fondo
+7. Implementar un segundo gráfico de barras para mostrar votaciones segun una fecha.
+8. Descargar imagenes SVG. 
