@@ -8,7 +8,7 @@ RUN npm run build
 
 # Fase de Servidor
 FROM nginx:alpine
-COPY --from=build /app/dist/nombreProyecto /usr/share/nginx/html
+COPY --from=build /app/dist/goty /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g","daemonoff;"]
 
