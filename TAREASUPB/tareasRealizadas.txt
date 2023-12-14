@@ -1,0 +1,5 @@
+MARTES 12/12/2023
+1. descargar bootstrap
+npm install bootstrap
+2. modificar angular.json para instanciar bootstrap
+3. agregamos las imagenes svg
