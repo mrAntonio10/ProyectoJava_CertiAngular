@@ -16,3 +16,5 @@ Encriptado
 --npm utilizados:
 npm i crypto-js
 npm i -D @types/crypto-js
+
+interfaz y uso de las interfaces locales para los videojuegos

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from '../../services/game.service';
-import { Game } from '../../interfaces/interfaces';
+import {Game, GAMES} from '../../interfaces/interfaces';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -9,15 +9,17 @@ import Swal from 'sweetalert2';
   styleUrls: ['./goty.component.css'],
 })
 export class GotyComponent implements OnInit {
-  juegos: Game[] = [];
+  juegos: Game[] = GAMES;
 
   constructor(private game: GameService) {}
 
   ngOnInit(): void {
-    this.game.getNominados().subscribe((juegos) => {
-      this.juegos = juegos;
-      console.log(this.juegos);
-    });
+    // this.game.getNominados().subscribe((juegos) => {
+    //   this.juegos = juegos;
+    //   console.log(this.juegos);
+    // });
+
+    //comentamos por que se creo una interfaz con los juegos
   }
 
   votaJuego(juego: Game) {
