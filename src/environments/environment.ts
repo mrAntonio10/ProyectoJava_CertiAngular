@@ -1,4 +1,6 @@
 export const environment = {
+  encrypt: true,
+  keyEcrypt: 'Logi',
   production: false,
   url: 'http://localhost:5000/firestore-grafica-2c7d2/us-central1',
   firebase: {

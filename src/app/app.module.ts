@@ -9,13 +9,17 @@ import { ComponentsModule } from './components/components.module';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import {LoginComponent} from "./pages/login/login.component";
+import { ErrorComponent } from './pages/error/error.component';
+import {FormsModule} from "@angular/forms";
 @NgModule({
-  declarations: [AppComponent, InicioComponent, GotyComponent],
+  declarations: [AppComponent, InicioComponent, GotyComponent, LoginComponent, ErrorComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ComponentsModule,
     HttpClientModule,
+    FormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
   ],

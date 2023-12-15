@@ -1,5 +1,18 @@
 MARTES 12/12/2023
-1. descargar bootstrap
+7. descargar bootstrap
 npm install bootstrap
-2. modificar angular.json para instanciar bootstrap
-3. agregamos las imagenes svg
+7. modificar angular.json para instanciar bootstrap
+8. agregamos las imagenes svg
+
+
+Jueves 14/12/2023
+Componentes Login
+Error
+Interfaz de usuario
+Export de usuarios
+
+Viernes 15/12/2023
+Encriptado
+--npm utilizados:
+npm i crypto-js
+npm i -D @types/crypto-js
