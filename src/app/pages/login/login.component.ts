@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {Usuario, USUARIOS} from "../interface/usuario";
-import {decrypt, encrypt} from "../../util/util-encrypt";
+import {encrypt} from "../../util/util-encrypt";
 
 @Component({
   selector: 'app-login',
@@ -17,14 +17,13 @@ export class LoginComponent implements OnInit{
   }
 
 
-  onSubmit(usuarioRequest: string){
-    console.log("Usuario a buscar", usuarioRequest);
-    console.log("filtrado", this.validationUsersList.filter(item => item.usuario == usuarioRequest));
-    // @ts-ignore
+  onSubmit(usuarioRequest: string, passwordRequest: string){
+ // @ts-ignore
     let usuarioOpt = this.validationUsersList.filter(
       item => item.usuario == usuarioRequest);
+
     // @ts-ignore
-    if(usuarioOpt.length>0 && decrypt(usuarioOpt.at(0).password) === this.password) {  //aseguramos de que existan datos para poder buscar supassword
+    if(usuarioOpt.length>0 && (usuarioOpt.at(0).password) === encrypt(passwordRequest)) {  //aseguramos de que existan datos para poder buscar supassword
       this.router.navigate(['/goty']);
     } else {
       this.router.navigate(['/error']);
@@ -32,9 +31,5 @@ export class LoginComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    //Para mostrar en pantalla las passwords encriptadas
-    // console.log(encrypt(JSON.stringify('marcoro')))
-    // console.log(encrypt(JSON.stringify('luchoro')))
-
   }
 }
