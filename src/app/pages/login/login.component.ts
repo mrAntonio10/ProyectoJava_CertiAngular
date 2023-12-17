@@ -20,7 +20,10 @@ export class LoginComponent implements OnInit{
   onSubmit(usuarioRequest: string, passwordRequest: string){
  // @ts-ignore
     let usuarioOpt = this.validationUsersList.filter(
-      item => item.usuario == usuarioRequest);
+      item => item.usuario == usuarioRequest
+    );
+
+    console.log(encrypt(passwordRequest));
 
     // @ts-ignore
     if(usuarioOpt.length>0 && (usuarioOpt.at(0).password) === encrypt(passwordRequest)) {  //aseguramos de que existan datos para poder buscar supassword

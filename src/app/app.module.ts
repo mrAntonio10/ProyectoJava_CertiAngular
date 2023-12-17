@@ -12,14 +12,14 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import {LoginComponent} from "./pages/login/login.component";
 import { ErrorComponent } from './pages/error/error.component';
 import {FormsModule} from "@angular/forms";
-@NgModule({
+@NgModule({                                                    //Login y  Error importados
   declarations: [AppComponent, InicioComponent, GotyComponent, LoginComponent, ErrorComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule, //Componente para aceptar Rutas o generar Paths
     ComponentsModule,
     HttpClientModule,
-    FormsModule,
+    FormsModule,  //Componente para aceptar Formularios
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
   ],
