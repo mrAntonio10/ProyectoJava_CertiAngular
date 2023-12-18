@@ -10,7 +10,7 @@ RUN npm run build
 FROM nginx:alpine
 COPY --from=build /app/dist/goty /usr/share/nginx/html
 EXPOSE 80
-CMD ["nginx", "-g","daemonoff;"]
+#CMD ["nginx", "-g","daemonoff;"]
 
 #DOCKER FILE PARA LEVANTAR UNA API
 #FROM maven:3.6.3-jdk-8 AS build
